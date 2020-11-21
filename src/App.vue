@@ -1,28 +1,68 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <div id="nav">
+      <router-link
+        v-if="this.authenticated"
+        to="/login"
+        v-on:click.native="logout()"
+        replace
+        >Logout</router-link
+      >
+    </div>
+    <router-view @authenticated="setAuthenticated" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/layouts/Header";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      mockAccount: {
+        authenticated: false,
+        isVerified: false,
+        username: "danial",
+        password: "12",
+      }, 
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    Header,
+  },
+  /*  mounted() {
+            if(!this.authenticated) {
+                this.$router.replace({ name: "login" });
+            }
+        },*/
+  methods: {
+    setAuthenticated(status) {
+      this.authenticated = status;
+    },
+    logout() {
+      this.authenticated = false;
+    },
+  },
+};
 </script>
 
 <style>
+body {
+  background-color: #f0f0f0;
+  background-image: url("~@/assets/library2.jpeg");
+  background-size: cover;
+  display: grid;
+  color:white;
+}
+h1 {
+  padding: 0;
+  margin-top: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 1024px;
+  margin: auto;
+  display: grid;
 }
 </style>
