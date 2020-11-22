@@ -20,7 +20,7 @@
           </slot>
         </header>
         <section class="modal-body" id="modalDescription">
-          <slot name="body"> FUCK YOU </slot>
+          <slot name="body"> PRAISE YOU </slot>
         </section>
         <footer class="modal-footer">
           <slot name="footer">
