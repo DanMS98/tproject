@@ -7,6 +7,10 @@ import AboutComponent from "../views/About"
 import SBookManagement from "../views/SBookManage"
 import AUserManagement from "../views/AUserManage"
 import StaffVerification from "../views/StaffVerification"
+import Register from "../views/Register"
+import NewEmployee from "../views/NewEmployee"
+import NewBook from "../views/NewBook"
+import Category from "../views/Category"
 
 Vue.use(VueRouter)
 
@@ -17,6 +21,26 @@ export default new VueRouter({
             redirect: {
                 name: "Home"
             }
+        },
+        {
+            path: "/Category",
+            name: "Category",
+            component: Category
+        },
+        {
+            path: "/NewBook",
+            name: "NewBook",
+            component: NewBook
+        },
+        {
+            path: "/NewEmployee",
+            name: "NewEmployee",
+            component: NewEmployee
+        },
+        {
+            path: "/Register",
+            name: "Register",
+            component: Register
         },
         {
             path: "/",

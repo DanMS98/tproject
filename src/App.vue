@@ -64,5 +64,24 @@ h1 {
   width: 1024px;
   margin: auto;
   display: grid;
+
+  /* direction: rtl; 
+  font-family: iransans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+  overflow-x: hidden;*/
 }
+
+@font-face {
+  font-family: iransans;
+  src: url('../src/assets/font/iran.ttf');
+}
+
+*{
+  font-family: iransans;
+}
+
 </style>

@@ -6,8 +6,12 @@
       <router-link to="/SBookManage"> Staff Book Management </router-link> |
       <router-link to="/StaffVerification"> Staff Verification </router-link> |
       <router-link to="/AUserManage"> Admin User Management </router-link> |
+      <router-link to="/Register"> Register </router-link> |
+      <router-link to="/NewEmployee"> New Employee </router-link> |
+      <router-link to="/NewBook"> New Book </router-link> |
+      <router-link to="/Category"> Category </router-link> |
       <router-link to="/login">Login </router-link>
-      
+
     </div>
   </header>
 </template>
@@ -33,4 +37,5 @@ export default {
   padding-right: 5px;
   text-decoration: none;
 }
+
 </style>
